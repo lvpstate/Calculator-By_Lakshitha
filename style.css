@@ -1,0 +1,321 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    font-family: 'Dosis', sans-serif;
+    font-display: swap;
+    margin: 0;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    gap: 18px;
+}
+
+.header-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 0%;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.header-text h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.2rem;
+    color: #d72880;
+    font-family: 'Dosis', sans-serif;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.header-text p {
+    margin: 0;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 1200px) {
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header-logo {
+        margin: 0 0 10px 0;
+    }
+}
+
+/* Optional: dark mode for header */
+body.dark-mode .main-header h1 {
+    color: #ffef78;
+}
+body.dark-mode .main-header p {
+    color: #ccc;
+}
+
+body{
+    align-items: center;
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+
+.wrapper{
+    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+}
+
+.screen{
+    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    font-size: 35px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width: 326px;
+}
+
+.calc-button-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 4.5% 0;
+}
+
+.calc-button{
+    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 40px;
+    height: 65px;
+}
+
+.calc-button:last-child{
+    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #fff;
+    background: #d72880;
+}
+
+.calc-button[data-value="="] {
+    background: #e53935 !important;
+    color: #fff !important;
+    border: 1px solid #b71c1c !important;
+}
+
+.calc-button[data-value="%"] {
+  -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #fff;
+    background: #d72880;  
+}
+
+.calc-button:last-child:hover{
+    background-color: inherit;
+    color: inherit;
+}
+
+.calc-button:hover{
+    background-color: inherit;
+}
+
+.calc-button[data-value="%"]:hover{
+    background-color: inherit;
+    color: inherit;
+}
+
+.calc-button:active{
+    background-color: #ffef78;
+}
+
+.double{
+    flex-basis: 20%;
+}
+
+.triple{
+    flex-basis: 30%;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: linear-gradient(320deg, #232526, #414345, #181818);
+    color: #fff;
+}
+
+body.dark-mode .wrapper {
+    background: rgba(30, 30, 30, 0.85);
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .screen {
+    background: rgba(40, 40, 40, 0.95);
+    color: #fff;
+}
+
+body.dark-mode .calc-button {
+    background: rgba(60, 60, 60, 0.85);
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .calc-button:last-child {
+    background: #d72880;
+    color: #fff;
+}
+
+body.dark-mode .calc-button:active {
+    background-color: #444;
+}
+
+body.dark-mode .calc-button[data-value="%"] {
+      background: #d72880;
+      color: #fff;
+}
+
+body.dark-mode .calc-button[data-value="%"]:active {
+    background-color: #444;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  font-size: 24px;
+}
+
+#expression {
+  text-align: right;
+  color: #888;
+  min-height: 22px;
+  margin-bottom: 2px;
+  font-size: 18px;
+  word-break: break-all;
+}
+#result {
+  font-size: 35px;
+  color: inherit;
+  text-align: right;
+  word-break: break-all;
+}
+
+#dark-mode-toggle .material-symbols-outlined {
+  font-size: 35px;
+}
+
+.main-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 16px 0 8px 0;
+    color: #000000;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    background: transparent;
+}
+
+body.dark-mode .main-footer {
+    color: #ffffff;
+}
+
+body.dark-mode .calc-button[data-value="←"] svg {
+    fill: #fff !important;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+body.dark-mode .wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-radius: 36px; /* Larger than .wrapper for outside glow */
+    z-index: -1;
+    background: linear-gradient(90deg, #fffb04, #ff0000, #15ff00, hwb(246 5% 1%));
+    background-size: 300% 300%;
+    filter: blur(100px) brightness(1.7); /* Strong diffused light */
+    opacity: 0.5;
+    pointer-events: none;
+    animation: frame-line-move 4s linear infinite;
+}
+
+@keyframes frame-line-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
