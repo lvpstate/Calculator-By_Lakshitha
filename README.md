@@ -1,2 +1,2 @@
-# Calculator-By_Lakshitha
-© Lakshitha Official Life
+# Project - 01 | Simple Calculator
+© Lakshitha Official Life - The L.V.Pstate, Inc
